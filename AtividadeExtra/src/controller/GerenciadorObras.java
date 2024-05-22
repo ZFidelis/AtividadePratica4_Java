@@ -2,7 +2,8 @@ package controller;
 import java.io.*;
 import java.util.ArrayList;
 
-import model.Obra;
+import model.*;
+import view.Console;
 
 public class GerenciadorObras {
     private static final String ARQUIVO = "obras.txt";
@@ -84,7 +85,9 @@ public class GerenciadorObras {
         }
         
         if (encontrou){
-            listaObras.get(pos).setTitulo("Jeref");
+            System.out.print("Digite o novo titulo da obra: ");
+            String title = Console.lerString();
+            listaObras.get(pos).setTitulo(title);
             try (FileWriter fw = new FileWriter(ARQUIVO); BufferedWriter bw = new BufferedWriter(fw)) {
                 for (Obra tempObra : listaObras) {
                     bw.write(tempObra + "\n");
