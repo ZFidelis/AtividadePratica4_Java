@@ -1,3 +1,4 @@
+package model;
 public class Obra {
     private String titulo;
     private String artista;

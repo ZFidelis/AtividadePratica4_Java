@@ -1,5 +1,8 @@
+package controller;
 import java.io.*;
 import java.util.ArrayList;
+
+import model.Obra;
 
 public class GerenciadorObras {
     private static final String ARQUIVO = "obras.txt";
